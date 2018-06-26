@@ -62,4 +62,5 @@ typings/
 
 package-lock.json
 bundle.js
+style.css
 packaged.yaml

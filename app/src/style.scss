@@ -1,0 +1,31 @@
+$container-size: 240px;
+$container-space: 30px;
+$score-board-size: $container-size * 4 + $container-space * 4 * 2;
+
+.score-board {
+  width: $score-board-size;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-start;
+
+  .container {
+    width: $container-size;
+    height: $container-size;
+    margin: $container-space;
+    background-color: gray;
+
+    .team {
+      display: block;
+      height: 20%;
+      font-size: x-large;
+      padding: 10px;
+    }
+    .score {
+      display: inline-block;
+      margin-top: $container-size / 5;
+      width: 100%;
+      font-size: xx-large;
+      text-align: center;
+    }
+  }
+}

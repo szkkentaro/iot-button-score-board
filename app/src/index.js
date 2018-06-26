@@ -1,3 +1,4 @@
+import './style.scss';
 import AWSIoTData from 'aws-iot-device-sdk';
 
 AWS.config.region = 'ap-northeast-1';
