@@ -3,52 +3,15 @@
 
 <head>
     <title>Score board</title>
+    <meta charset="utf-8" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aws-sdk/2.259.1/aws-sdk.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.16/vue.min.js"></script>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
-    <div class="score-board">
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
-        <div class="container">
-            <span class="team">チーム名</span>
-            <span class="score">1</span>
-        </div>
+    <div id="app">
+        <score-board></score-board>
     </div>
     <div id="mqtt-div"></div>
     <div id="message-div"></div>

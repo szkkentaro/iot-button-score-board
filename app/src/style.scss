@@ -2,17 +2,51 @@ $container-size: 240px;
 $container-space: 30px;
 $score-board-size: $container-size * 4 + $container-space * 4 * 2;
 
+
+.button {
+  border-width: 1px;
+  cursor: pointer;
+  padding-top: calc(.375em - 1px);
+  padding-left: .75em;
+  padding-right: .75em;
+  padding-bottom: calc(.375em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  font-size: 1.5rem;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  color: #fff;
+  background-color: #3273dc;
+}
+
+.top {
+  width: $score-board-size - $container-space * 2;
+  padding-left: $container-space;
+  padding-right: $container-space;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  justify-content: space-between;
+
+  .title {
+    font-size: 1.5em;
+  }
+}
+
 .score-board {
   width: $score-board-size;
   display: flex;
   flex-flow: row wrap;
   justify-content: flex-start;
+  margin-left: auto;
+  margin-right: auto;
 
   .container {
     width: $container-size;
     height: $container-size;
     margin: $container-space;
     background-color: gray;
+    border-radius: 5px;
 
     .team {
       display: block;
