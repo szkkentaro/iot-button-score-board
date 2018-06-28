@@ -2,6 +2,9 @@ $container-size: 240px;
 $container-space: 30px;
 $score-board-size: $container-size * 4 + $container-space * 4 * 2;
 
+body {
+  font-family: Lato, "Noto Sans JP", "游ゴシック Medium", "游ゴシック体", "Yu Gothic Medium", YuGothic, "ヒラギノ角ゴ ProN", "Hiragino Kaku Gothic ProN", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+}
 
 .button {
   border-width: 1px;
@@ -45,8 +48,9 @@ $score-board-size: $container-size * 4 + $container-space * 4 * 2;
     width: $container-size;
     height: $container-size;
     margin: $container-space;
-    background-color: gray;
+    background-color: hsl(141, 71%, 48%);
     border-radius: 5px;
+    transition: opacity 0.15s ease-in-out, transform 0.25s ease-in-out;
 
     .team {
       display: block;
