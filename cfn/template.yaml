@@ -12,7 +12,6 @@ Globals:
 Parameters:
     IoTEndpoint:
         Type: String
-        Default: "**************.iot.ap-northeast-1.amazonaws.com" # Fix me
     IoTTopicName:
         Type: String
         Default: score-board
