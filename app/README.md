@@ -27,8 +27,10 @@ npm run build
 
 ## How to deploy 
 
-```
-$ S3_BUCKET=score-board-staticsitebucket-*************
+```console
+$ AWS_PROFILE=iot-ideathon # Fix me
+$ STACK_NAME=score-board
+$ S3_BUCKET=$(aws cloudformation describe-stack-resources --stack-name $STACK_NAME --profile $AWS_PROFILE | jq -r '.StackResources | map(select(.["LogicalResourceId"] == "StaticSiteBucket")) | .[0].PhysicalResourceId');
 $ aws s3 cp dist/ s3://$S3_BUCKET/ --recursive
 ```
 
