@@ -1,7 +1,7 @@
 const AWS = require('aws-sdk');
 const iotData = new AWS.IotData({
     endpoint: process.env.IOT_ENDPOINT,
-    region: 'ap-northeast-1'
+    region: process.env.AWS_REGION
 });
 
 exports.handler = async (event, context) => {
