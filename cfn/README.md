@@ -24,7 +24,8 @@ You have to finish provision some AWS resources before provision CFn or deploy W
 
 ## How to provision
 
-```
+```console
+$ AWS_PROFILE=iot-ideathon # Fix me
 $ STACK_NAME=score-board
 $ CFN_S3_BUCKET=cf-templates-*******-ap-northeast-1 # Fix me
 $ IOT_ENDPOINT=$(aws iot describe-endpoint | jq -r ".endpointAddress")
