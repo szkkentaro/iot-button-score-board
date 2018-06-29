@@ -7,12 +7,10 @@ exports.handler = async (event, context) => {
         event.deviceInfo.deviceId
     ].join("-");
 
-    const params = {
+    await dynamo.updateItem({
         TableName: process.env.DYNAMODB_TABLE,
-        Key: { id: { S: id } },
-        AttributeUpdates: { score: { Action: 'ADD', Value: { N: "1" } } },
+        Key: { Id: { S: id } },
+        AttributeUpdates: { Score: { Action: 'ADD', Value: { N: "1" } } },
         ReturnValues: 'ALL_NEW'
-    };
-    const data = await dynamo.updateItem(params).promise().catch(console.err);
-    console.log(JSON.stringify(event, data));
+    }).promise().catch(console.err);
 };
