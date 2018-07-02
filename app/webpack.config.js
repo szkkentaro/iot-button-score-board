@@ -19,7 +19,7 @@ module.exports = {
         rules: [{
             test: /\.scss$/,
             use: ExtractTextPlugin.extract({
-                use: [{loader: 'css-loader', options: {url: false}}, 'sass-loader'],
+                use: [{ loader: 'css-loader', options: { url: false } }, 'sass-loader'],
             })
         }]
     },
