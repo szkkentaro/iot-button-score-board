@@ -87,16 +87,16 @@ Vue.component('score-board', {
     data() {
         return {
             teams: [
-                { id: "id-1", name: "チーム1", score: 0, isOpen: false, blink: false},
-                { id: "id-2", name: "チーム2", score: 0, isOpen: false, blink: false},
-                { id: "id-3", name: "チーム3", score: 0, isOpen: false, blink: false},
-                { id: "id-4", name: "チーム4", score: 0, isOpen: false, blink: false},
-                { id: "id-5", name: "チーム5", score: 0, isOpen: false, blink: false},
-                { id: "id-6", name: "チーム6", score: 0, isOpen: false, blink: false},
-                { id: "id-7", name: "チーム7", score: 0, isOpen: false, blink: false},
-                { id: "id-8", name: "チーム8", score: 0, isOpen: false, blink: false},
-                { id: "id-9", name: "チーム9", score: 0, isOpen: false, blink: false},
-                { id: "id-10", name: "チーム10", score: 0, isOpen: false, blink: false},
+                { id: "id-1", name: "チーム1", score: 0, isOpen: false, blink: false },
+                { id: "id-2", name: "チーム2", score: 0, isOpen: false, blink: false },
+                { id: "id-3", name: "チーム3", score: 0, isOpen: false, blink: false },
+                { id: "id-4", name: "チーム4", score: 0, isOpen: false, blink: false },
+                { id: "id-5", name: "チーム5", score: 0, isOpen: false, blink: false },
+                { id: "id-6", name: "チーム6", score: 0, isOpen: false, blink: false },
+                { id: "id-7", name: "チーム7", score: 0, isOpen: false, blink: false },
+                { id: "id-8", name: "チーム8", score: 0, isOpen: false, blink: false },
+                { id: "id-9", name: "チーム9", score: 0, isOpen: false, blink: false },
+                { id: "id-10", name: "チーム10", score: 0, isOpen: false, blink: false },
             ],
             isOpen: false
         }
@@ -128,8 +128,8 @@ Vue.component('score-board', {
         mqttClient.on('message', (topic, payload) => {
             console.log(`${topic}: ${payload.toString()}`);
             var message = JSON.parse(payload.toString());
-            var score = message.score.N;
-            var id = message.id.S;
+            var score = message.Score.N;
+            var id = message.Id.S;
 
             var team = this.$data.teams.find((v) => v.id === id);
             if (team != null) {
