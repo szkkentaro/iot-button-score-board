@@ -50,7 +50,7 @@ body {
     margin: $container-space;
     background-color: hsl(141, 71%, 48%);
     border-radius: 5px;
-    transition: opacity 0.15s ease-in-out, transform 0.25s ease-in-out;
+    transition: opacity 0.5s ease-in-out, transform 0.25s ease-in-out;
 
     .team {
       display: block;

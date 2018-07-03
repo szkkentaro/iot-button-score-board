@@ -62,15 +62,14 @@ Vue.component('score-tile', {
             setTimeout(() => {
                 this.$data.style.opacity = 1;
                 this.$emit("blinked", this.team);
-            }, 150);
+            }, 500);
         },
         'team.isOpen': function () {
-            console.log(this);
             this.$data.style.transform = 'scale(1.2)';
             setTimeout(() => {
                 this.$data.style.transform = 'scale(1)';
                 this.$emit("blinked", this.team);
-            }, 250);
+            }, 450);
         }
     },
     template:
@@ -140,9 +139,12 @@ Vue.component('score-board', {
     },
     methods: {
         buttonClicked(event) {
-            var closedTeam = this.sortedTeams.find((v) => !v.isOpen)
-            if (closedTeam != null) {
-                closedTeam.isOpen = true;
+            var closedTeams = this.sortedTeams.filter((v) => !v.isOpen);
+            if (closedTeams.length === 2) {
+                closedTeams[0].isOpen = true;
+                closedTeams[1].isOpen = true;
+            } else if (closedTeams.length > 2) {
+                closedTeams[0].isOpen = true;
             }
         },
         blinked(blinkedTeam) {
